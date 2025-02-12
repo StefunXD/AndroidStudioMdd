@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1,
+    "quote":"I found a diamond in the rough",
+    "song":"Diamond in da Ruff",
+    "artist":"Matt Martians",
+    "album":"The Drum Chord Theory",
+    "date":"2017"
+  },
+  {
+    "id": 2,
+    "quote": "Groove, is in the Heart",
+    "song": "Groove is In the Hearts",
+    "artist": "Deee-Lite",
+    "album": "The elektra Years",
+    "date": "1990"
+  },
+  {
+    "id": 3,
+    "quote": "The way you move is mystery",
+    "song": "D.A.N.C.E",
+    "artist": "Justice",
+    "album": "Justice",
+    "date": "2007"
+  },
+  {
+    "id": 4,
+    "quote": "Tonight she just yelling, \"Fuck me\", two weeks she'll be yelling fuck me",
+    "song": "CocoaButter Kisses",
+    "artist": "Chance the Rapper",
+    "album": "Acid Rap",
+    "date": "2013"
+  },
+  {
+
+    "id": 5,
+    "quote":"Go! Go! Go! Godzilla",
+    "song":"Godzilla",
+    "artist":"Bear McCreary, Serj Takian",
+    "album":"Godzilla King of The Monsters",
+    "date":"2013"
+  }
+]

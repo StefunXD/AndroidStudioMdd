@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Rock",
+    "description": "Le rock est un genre musical populaire qui s'est développé dans les années 1950."
+  },
+  {
+    "id": 2,
+    "name": "Pop",
+    "description": "La pop est un genre de musique populaire qui a ses origines dans le rock and roll."
+  },
+  {
+    "id": 3,
+    "name": "Jazz",
+    "description": "Le jazz est un genre musical qui est né dans les communautés afro-américaines du sud des États-Unis."
+  },
+  {
+    "id": 4,
+    "name": "Classique",
+    "description": "Jazz fusion (also known as jazz rock, jazz-rock fusion, or simply fusion[4]) is a popular music genre that developed in the late 1960s when musicians combined jazz harmony and improvisation with rock music, funk, and rhythm and blues."
+  },
+  {
+    "id": 5,
+    "name": "Néo-Soul",
+    "description": "Le jazz est un genre musical qui est né dans les communautés afro-américaines du sud des États-Unis."
+  },
+  {
+    "id": 6,
+    "name": "Rap",
+    "description": "Le jazz est un genre musical qui est né dans les communautés afro-américaines du sud des États-Unis."
+  },
+  {
+    "id": 7,
+    "name": "R&B",
+    "description": "\"RnB\" redirects here. For the Japanese television station that uses the abbreviation RNB, see Nankai Broadcasting. For the EP by Ruger and Bnxn"
+  }
+]
