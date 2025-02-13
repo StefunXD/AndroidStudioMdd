@@ -23,14 +23,14 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.ExposedDropdownMenuBoxScope
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SegmentedButton
-import androidx.compose.material3.SegmentedButtonDefaults
 import androidx.compose.material3.SingleChoiceSegmentedButtonRow
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -44,10 +44,12 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.rememberNavController
 import com.example.mdd.ui.elements.SliderDiscrete
+import com.example.mdd.ui.management.Blindtestmanagerpage
 import com.example.mdd.ui.theme.MDDTheme
 import com.example.mdd.uimanager.DropDownOptionsBlindTest
 import com.example.mdd.uimanager.GenreRaw
 import com.example.mdd.utils.loadGenres
+import com.example.mdd.viewmodel.SliderViewModel
 import com.example.mdd.viewmodel.ViewModelBlindTestOptionsDropdown
 import androidx.compose.material3.SegmentedButtonDefaults.itemShape as itemShape1
 
@@ -198,72 +200,12 @@ fun CardSimilarMainPage(smp: SimilarMainPage, modifier: Modifier = Modifier) {
 ///BlindTests
 
 
-@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-
-fun blind_test_manager_page(){
-    ///Par genre
-    ///Par artist
-    ///Par niveau de difficulté
-    ///Nombres de questions
-    val context = LocalContext.current
-    //actions
-    //Dropdown
-    val viewModel : ViewModelBlindTestOptionsDropdown = viewModel()
-    var selectedValueFromDropdown by remember { mutableStateOf("")}
-    //Difficulté
-    var selecteddiff by remember { mutableStateOf(0) }
-    val options_segmentedbutton = listOf(context.getString(R.string.bt_diff1),context.getString(R.string.bt_diff2))
-
-    Column (modifier = Modifier.padding(16.dp)) {
-        Text(text = "Blind test musical")
-        Text(text = "Choississez les options de votre blind test")
-        DropDownOptionsBlindTest(viewModel = viewModel,
-            onOptionSelected = { selectedOption -> selectedValueFromDropdown = selectedOption})
-        //$selectedOption
-        Text(text = context.getString(R.string.bt_diff), modifier = Modifier.align(Alignment.CenterHorizontally))
-        SingleChoiceSegmentedButtonRow ( modifier = Modifier.align(Alignment.CenterHorizontally)) {
-            options_segmentedbutton.forEachIndexed {index, label -> SegmentedButton(
-                shape = itemShape1(index = index, count = options_segmentedbutton.size),
-                onClick = { selecteddiff = index},
-               //valeur que je récupère
-                selected = index == selecteddiff
-            ) {
-                Text(label)
-            }
-            }
-        }
-        Text(text = context.getString(R.string.dropdown_bt_many),modifier = Modifier.align(Alignment.CenterHorizontally))
-        SliderDiscrete()
-
-        Button(onClick = { /*TODO*/ },
-            modifier = Modifier.align(Alignment.CenterHorizontally)) {
-            Text(text = context.getString(R.string.blind_start))
-        }
-    }
-
-}
-
-@OptIn(ExperimentalMaterial3Api::class)
-private fun ExposedDropdownMenuBoxScope.OutlinedTextField(
-    value: String,
-    onValueChange: () -> Unit,
-    readOnly: Boolean,
-    trailingIcon: @Composable () -> Unit,
-    function: () -> Unit
-) {
-    TODO("Not yet implemented")
-}
-
-@Composable
-fun blind_test_question_page(){
-
-}
 
 @Composable
 fun Finale_blind_test_assembler(){
-blind_test_manager_page()
+     Blindtestmanagerpage(viewModelslider = SliderViewModel())
+    val viewModelslider = SliderViewModel()
+    Text(text = "Il y'a auras" + viewModelslider.sliderValue.toString() +" questions")
 }
 
 

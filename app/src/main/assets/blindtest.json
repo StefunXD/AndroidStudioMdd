@@ -1,0 +1,225 @@
+{
+  "questions": [
+  {
+    "artiste":"Tom Misch",
+    "genre":"Soul",
+    "audioFile":"Tom_Misch__beforeParis",
+    "answers": [
+      {"text": "before Paris (Tom Mish)" , "isCorrect":  true},
+      {"text": "Cloak (Jordan Rakei)" , "isCorrect":  false},
+      {"text": "You Don't Know (Loyle Carner)" , "isCorrect":  false},
+      {"text": "Ivy (Frank Ocean)" , "isCorrect":  false}
+    ]
+  },
+{
+  "artiste":"Tyler The Creator",
+  "genre":"HipHop",
+  "audioFile":"TylerTheCreator__foreword",
+  "answers": [
+    {"text": "Boredeme (Tyler The Creator)" , "isCorrect":  true},
+    {"text": "Open a Window (Rex Orange County)" , "isCorrect":  false},
+    {"text": "Ryd (Steve Lacy)" , "isCorrect":  false},
+    {"text": "Get Away (The Internet)" , "isCorrect":  false}
+  ]
+},
+{
+  "artiste":"Tyler The Creator",
+  "genre":"HipHop",
+  "audioFile":"TylerTheCreator__cherryBomb",
+  "answers": [
+    {"text": "Cherry Bomb (Tyler The Creator)" , "isCorrect":  true},
+    {"text": "Boogie (Brockhampton)" , "isCorrect":  false},
+    {"text": "Ain't it funny (Danny Brown)" , "isCorrect":  false},
+    {"text": "OFFLINE ! (Jpegmafia)" , "isCorrect":  false}
+  ]
+},
+{
+  "artiste":"Daniele Ceasar",
+  "genre":"HipHop",
+  "audioFile":"DanielleCeasar__entropy",
+  "answers": [
+    {"text": "Entropy (Daniel Ceasar)" , "isCorrect":  true},
+    {"text": "Going Normal (Matt Martians)" , "isCorrect":  false},
+    {"text": "Inside Outside (Mac Miller)" , "isCorrect":  false},
+    {"text": "R.I.P Young (Isaiah Rashad)" , "isCorrect":  false}
+  ]
+},
+{
+  "artiste":"Dee-Lite",
+  "genre":"Electro",
+  "audioFile":"DeeLite__grooveisinthehearts",
+  "answers": [
+    {"text": "Groove is in the Heart (Dee-Lite)" , "isCorrect":  true},
+    {"text": "Pump the Jam (Technotronik)" , "isCorrect":  false},
+    {"text": "Jam Session (Jamiroquai)" , "isCorrect":  false},
+    {"text": "Lord of Zilatron (Bootsy Collins)" , "isCorrect":  false}
+  ]
+},
+{
+  "artiste":"Martin Solveig",
+  "genre":"Electro",
+  "audioFile":"MartinSolveig__superficial",
+  "answers": [
+    {"text": "Superficial (Martin Solveig)" , "isCorrect":  true},
+    {"text": "Love don't let me go (David Guetta)" , "isCorrect":  false},
+    {"text": "Change (Savant)" , "isCorrect":  false},
+    {"text": "Genesis (Justice)" , "isCorrect":  false}
+  ]
+},
+{
+  "artiste":"Justice",
+  "genre":"Electro",
+  "audioFile":"Justice__d.a.n.c.e",
+  "answers": [
+    {"text": "D.A.N.C.E (Justice)" , "isCorrect":  true},
+    {"text": "Down the road (C2C)" , "isCorrect":  false},
+    {"text": "Lone Digger (Caravane Palace)" , "isCorrect":  false},
+    {"text": "Discovery (Daft Punk)" , "isCorrect":  false}
+  ]
+},
+{
+  "artiste":"ThunderCat",
+  "genre":"Funk",
+  "audioFile":"Thundercat__themchanges",
+  "answers": [
+    {"text": "Theme Changes (ThunderCat)" , "isCorrect":  true},
+    {"text": "Mind Mishief (Tame Impala)" , "isCorrect":  false},
+    {"text": "Gemini Right (Steve Lacy)" , "isCorrect":  false},
+    {"text": "Solo (Frank Ocean)" , "isCorrect":  false}
+  ]
+},
+{
+  "artiste":"Noname",
+  "genre":"Rap-Us",
+  "audioFile":"Noname__diddybop",
+  "answers": [
+    {"text": "Diddy Bop (Noname)" , "isCorrect":  true},
+    {"text": "Nah'mean Hah'm Saying (Jean Grae)" , "isCorrect":  false},
+    {"text": "DYSFUNCTIONAL (VanJess)" , "isCorrect":  false},
+    {"text": "Might bang, might not (Little Simz)" , "isCorrect":  false}
+  ]
+},
+{
+  "artiste":"Pink Siifu",
+  "genre":"Rap-Us",
+  "audioFile":"PinkSiifu__galaxySkateway",
+  "answers": [
+    {"text": "Galaxy Skateway (Pink Siifu)" , "isCorrect":  true},
+    {"text": "Dog Food (IDK)" , "isCorrect":  false},
+    {"text": "CBGBS (De La Soul)" , "isCorrect":  false},
+    {"text": "La Lisa(SIR)" , "isCorrect":  false}
+  ]
+},
+
+{
+  "artiste":"Pink Siifu",
+  "genre":"Rap-Us",
+  "audioFile":"Saba__galaxySkateway",
+  "answers": [
+    {"text": "Photosynthesis (Saba)" , "isCorrect":  true},
+    {"text": "A lot (21 Savage)" , "isCorrect":  false},
+    {"text": "New World Order (Bas)" , "isCorrect":  false},
+    {"text": "Isaiah Rashad (Cilvia demo)" , "isCorrect":  false}
+  ]
+},
+{
+  "artiste":"Mac Miller",
+  "genre":"Rap-Us",
+  "audioFile":"MacMiller__dang",
+  "answers": [
+    {"text": "Dang (Mac Miller)" , "isCorrect":  true},
+    {"text": "Gangsta (Anderson .Paak)" , "isCorrect":  false},
+    {"text": "Guild (Earl Sweatshirt)" , "isCorrect":  false},
+    {"text": "3005 (Childish Gambino)" , "isCorrect":  false}
+  ]
+},
+{
+  "artiste":"Tank and the Bangas",
+  "genre":"Rap-Us",
+  "audioFile":"TankAndTheBangas__anxiety",
+  "answers": [
+    {"text": "Anxiety (Tank and The Bangas)" , "isCorrect":  true},
+    {"text": "Slow (Amvber Navran)" , "isCorrect":  false},
+    {"text": "Carried Away (H.E.R)" , "isCorrect":  false},
+    {"text": "Tightrope (Janelle Monàe)" , "isCorrect":  false}
+  ]
+},
+{
+  "artiste":"Joao Donato",
+  "genre":"Music Bresilien",
+  "audioFile":"JoaoDonato__ara",
+  "answers": [
+    {"text": "A ra (Joao Donato)" , "isCorrect":  true},
+    {"text": "Desafinado (Joao Gilberto)" , "isCorrect":  false},
+    {"text": "So Danço Samba (Stan Getz)" , "isCorrect":  false},
+    {"text": "Olha Quem Ta Chegando (Marco Valle)" , "isCorrect":  false}
+  ]
+},
+{
+  "artiste":"Elis Regina",
+  "genre":"Music Bresilien",
+  "audioFile":"EliseRegina__roda",
+  "answers": [
+    {"text": "Roda (Elis Regina)" , "isCorrect":  true},
+    {"text": "Desafinado (Joao Gilberto)" , "isCorrect":  false},
+    {"text": "Agua de beber (Astrud Gilberto)" , "isCorrect":  false},
+    {"text": "Outra Vez (Elizeth Cardoso)" , "isCorrect":  false}
+  ]
+},
+{
+  "artiste":"Sergio Mendes",
+  "genre":"Music Bresilien",
+  "audioFile":"SergioMendez__Mas Que Nada",
+  "answers": [
+    {"text": "Mas Que Nada (Sergio Mendes)" , "isCorrect":  true},
+    {"text": "Desafinado (Joao Gilberto)" , "isCorrect":  false},
+    {"text": "Falador Passa Mal (Os Originais Do Samba)" , "isCorrect":  false},
+    {"text": "Samba da uma Nota So (Antonio Carlos Jobim)" , "isCorrect":  false}
+  ]
+},
+{
+  "artiste":"Hiatus Kayotes",
+  "genre":"NeoSouls",
+  "audioFile":"HiatusKayotes__Molasses",
+  "answers": [
+    {"text": "Molasses (Hiatus Kayotes)" , "isCorrect":  true},
+    {"text": "On & On (Erykah Badu)" , "isCorrect":  false},
+    {"text": "Without You (Anderson .Paak)" , "isCorrect":  false},
+    {"text": "Adonis (Adi Oasis)" , "isCorrect":  false}
+  ]
+},
+{
+  "artiste":"Adi Oasis",
+  "genre":"NeoSouls",
+  "audioFile":"AdiOasis__Adonis",
+  "answers": [
+    {"text": "Adonis (Adi Oasis)" , "isCorrect":  true},
+    {"text": "Float (Janelle Monàe)" , "isCorrect":  false},
+    {"text": "Rise (Solange)" , "isCorrect":  false},
+    {"text": "STANKA POOH (Doechii)" , "isCorrect":  false}
+  ]
+},
+{
+  "artiste":"Robert Glasper",
+  "genre":"NeoSouls",
+  "audioFile":"RobertGlasper__AfroBlues",
+  "answers": [
+    {"text": "Afro Blues (Robert Glasper)" , "isCorrect":  true},
+    {"text": "On & On (Erykah Badu)" , "isCorrect":  false},
+    {"text": "Good Man (Raphael Saadiq)" , "isCorrect":  false},
+    {"text": "Black America Again (Common)" , "isCorrect":  false}
+  ]
+},
+{
+  "artiste":"Emmavie",
+  "genre":"NeoSouls",
+  "audioFile":"Emmavie__StayHere",
+  "answers": [
+    {"text": "Stay here (Emmavie)" , "isCorrect":  true},
+    {"text": "On & On (Erykah Badu)" , "isCorrect":  false},
+    {"text": "Oblivion (Noname)" , "isCorrect":  false},
+    {"text": "Afro Blues (Robert Glasper)" , "isCorrect":  false}
+  ]
+}
+  ]
+}
