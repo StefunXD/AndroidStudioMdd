@@ -5,7 +5,6 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
 import com.example.mdd.ui.management.StartScreen
-import com.example.mdd.ui.management.Blindtestmanagerpage
 import com.example.mdd.viewmodel.BlindTestViewModel
 
 

@@ -1,4 +1,4 @@
-package com.example.mdd.model.DataBlindTestQuestion
+package com.example.mdd.model
 
 import com.google.gson.annotations.SerializedName
 
