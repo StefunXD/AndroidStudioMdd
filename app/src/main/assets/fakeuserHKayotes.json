@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "name": "Nai Palm",
+      "password": "5tR0nGp",
+      "profile_photo": "NaiPalmProfile",
+      "id_similar": [1, 2, 3, 4],
+      "id_commentaires": [7, 18, 21],
+      "date": "2024-05-15"
+    },
+    {
+      "name": "Paul Bender",
+      "password": "P@5s",
+      "profile_photo": "PaulBenderProfile",
+      "id_similar": [5, 6, 7, 8],
+      "id_commentaires": [3, 12, 15, 29],
+      "date": "2024-10-22"
+    },
+    {
+      "name": "Simon Mavin",
+      "password": "M@V1n8",
+      "profile_photo": "SimonMavinProfile",
+      "id_similar": [9, 10, 11, 12],
+      "id_commentaires": null,
+      "date": "2024-12-01"
+    },
+    {
+      "name": "Perrin Moss",
+      "password": "M055",
+      "profile_photo": "PerrinMossProfile",
+      "id_similar": [13, 14, 15, 16],
+      "id_commentaires": [1, 5],
+      "date": "2025-01-10"
+    }
+  ]
+}

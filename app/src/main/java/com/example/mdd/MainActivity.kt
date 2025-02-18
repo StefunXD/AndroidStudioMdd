@@ -8,6 +8,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -23,9 +24,11 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SegmentedButton
 import androidx.compose.material3.SingleChoiceSegmentedButtonRow
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -43,12 +46,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.rememberNavController
+import com.example.mdd.navigations.Graph
 import com.example.mdd.ui.elements.SliderDiscrete
 import com.example.mdd.ui.management.Blindtestmanagerpage
 import com.example.mdd.ui.theme.MDDTheme
 import com.example.mdd.uimanager.DropDownOptionsBlindTest
-import com.example.mdd.uimanager.GenreRaw
-import com.example.mdd.utils.loadGenres
+import com.example.mdd.viewmodel.BlindTestViewModel
 import com.example.mdd.viewmodel.SliderViewModel
 import com.example.mdd.viewmodel.ViewModelBlindTestOptionsDropdown
 import androidx.compose.material3.SegmentedButtonDefaults.itemShape as itemShape1
@@ -60,10 +63,19 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             MDDTheme {
-                    Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                        Greeting(
-                            name = "Android",
-                            modifier = Modifier.padding(innerPadding))
+                mediaPlayer = MediaPlayer.create(this, R.raw.theelevatorbossanova)
+                mediaPlayer?.isLooping = true
+
+                // Démarrer la lecture
+                mediaPlayer?.start()
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colorScheme.background
+                ) {
+                    val navController = rememberNavController()
+                    val viewModel: BlindTestViewModel = viewModel()
+                    MainPage(SampleSimilarMainPage.SimilarMainPageSample)
+                    //Graph(navController = navController, viewModel = viewModel)
                 }
             }
         }
@@ -84,20 +96,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
     )
 }
 
-@Composable
-fun PageLogo(quts: List<QuoteLogoPage>, modifier: Modifier = Modifier) {
-    var isExpanded by remember { mutableStateOf(false) }
-    Column() {
-        Image(
-            painter = painterResource(id = R.drawable.baseline_library_music_24),
-            contentDescription = "Utilisateur",
-        )
-        Text("Bienvenue sur MDD")
-        LazyColumn {
-            items(quts) { quote -> Text(quote.quote) }
-        }
-    }
-}
 
 
 @Composable
@@ -138,14 +136,14 @@ fun MainPage(smps: List<SimilarMainPage>, modifier: Modifier = Modifier) {
     var isPlaying by remember { mutableStateOf(false) }
     var isExpanded by remember { mutableStateOf(false) }
     val context = LocalContext.current
-    val genreList = loadGenres(context)
+    //val genreList = loadGenres(context)
     Text(text = "Nouveautés")
     Text(text = "Questions")
     Column {
         LazyColumn {
             items(smps) { smp -> CardSimilarMainPage(smp, modifier) }
         }
-        GenreRaw()
+
         Button(onClick = { /*TODO*/ },  modifier = Modifier.align(Alignment.CenterHorizontally)) {
 
             Text(text = "Affichez plus")

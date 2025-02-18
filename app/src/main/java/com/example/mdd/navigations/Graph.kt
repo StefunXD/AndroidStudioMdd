@@ -4,7 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
-import com.example.mdd.ui.management.StartScreen
+import com.example.mdd.ui.management.StartScreenBlindTest
 import com.example.mdd.viewmodel.BlindTestViewModel
 
 
@@ -15,7 +15,8 @@ fun Graph(navController: NavHostController,
         navController = navController,
         startDestination = Screen.Home.route
     ) {
-        composable(Screen.Home.route) { StartScreen(navController, viewModel) }
+
+      composable(Screen.StartScreenBlindTest.route) {StartScreenBlindTest(navController, viewModel) }
     }
 
 }

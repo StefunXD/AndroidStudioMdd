@@ -1,0 +1,373 @@
+[
+{
+  "artists": [
+    {
+      "name": "Matt Martians",
+      "albums": [
+        {
+          "title": "The Drum Chord Theory",
+          "release_date": "January 27, 2017",
+          "songs": [
+            {
+              "title": "Spend The Night",
+              "duration": "4:47"
+            },
+            {
+              "title": "If You Were My Girlfriend",
+              "duration": "3:24"
+            },
+            {
+              "title": "What Love Is",
+              "duration": "4:06"
+            }
+          ]
+        },
+        {
+          "title": "The Last Party",
+          "release_date": "April 8, 2021",
+          "songs": [
+            {
+              "title": "Normal",
+              "duration": "3:12"
+            },
+            {
+              "title": "The Last Party",
+              "duration": "3:55"
+            },
+            {
+              "title": "29",
+              "duration": "3:18"
+            }
+          ]
+        },
+        {
+          "title": "Dent May / Matt Martians",
+          "release_date": "August 13, 2013",
+          "songs": [
+            {
+              "title": "Dent Jusay",
+              "duration": "3:23"
+            },
+            {
+              "title": "Me Acid Tonight",
+              "duration": "3:58"
+            },
+            {
+              "title": "Call Me",
+              "duration": "3:26"
+            }
+          ]
+        },
+        {
+          "title": "Going Normal",
+          "release_date": "July 22, 2022",
+          "songs": [
+            {
+              "title": "Going Normal",
+              "duration": "3:29"
+            },
+            {
+              "title": "The Last Party",
+              "duration": "3:55"
+            },
+            {
+              "title": "29",
+              "duration": "3:18"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mac Miller",
+      "albums": [
+        {
+          "title": "Swimming",
+          "release_date": "August 3, 2018",
+          "songs": [
+            {
+              "title": "Come Back to Earth",
+              "duration": "2:41"
+            },
+            {
+              "title": "Hurt Feelings",
+              "duration": "4:02"
+            },
+            {
+              "title": "What's the Use?",
+              "duration": "4:48"
+            }
+          ]
+        },
+        {
+          "title": "Circles",
+          "release_date": "January 17, 2020",
+          "songs": [
+            {
+              "title": "Circles",
+              "duration": "2:50"
+            },
+            {
+              "title": "Complicated",
+              "duration": "3:52"
+            },
+            {
+              "title": "Blue World",
+              "duration": "3:29"
+            }
+          ]
+        },
+        {
+          "title": "GO:OD AM",
+          "release_date": "September 18, 2015",
+          "songs": [
+            {
+              "title": "Doors",
+              "duration": "2:77"
+            },
+            {
+              "title": "Brand Name",
+              "duration": "5:02"
+            },
+            {
+              "title": "Rush Hour",
+              "duration": "3:20"
+            }
+          ]
+        },
+        {
+          "title": "The Divine Feminine",
+          "release_date": "September 16, 2016",
+          "songs": [
+            {
+              "title": "Congratulations",
+              "duration": "4:16"
+            },
+            {
+              "title": "Dang!",
+              "duration": "5:05"
+            },
+            {
+              "title": "Stay",
+              "duration": "5:26"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Kaytranada",
+      "albums": [
+        {
+          "title": "99.9%",
+          "release_date": "May 6, 2016",
+          "songs": [
+            {
+              "title": "Track Uno",
+              "duration": "3:44"
+            },
+            {
+              "title": "Bus Ride",
+              "duration": "4:59"
+            },
+            {
+              "title": "Got It Good",
+              "duration": "3:48"
+            }
+          ]
+        },
+        {
+          "title": "Bubba",
+          "release_date": "December 13, 2019",
+          "songs": [
+            {
+              "title": "10%",
+              "duration": "3:06"
+            },
+            {
+              "title": "Culture",
+              "duration": "3:50"
+            },
+            {
+              "title": "What You Need",
+              "duration": "4:02"
+            }
+          ]
+        },
+        {
+          "title": "Timeless",
+          "release_date": "June 7, 2024",
+          "songs": [
+            {
+              "title": "Spit It Out",
+              "duration": "3:23"
+            },
+            {
+              "title": "Feel a Way",
+              "duration": "3:19"
+            },
+            {
+              "title": "More Than a Little Bit",
+              "duration": "3:08"
+            }
+          ]
+        }
+      ]
+    },
+      {
+        "name": "The Internet",
+        "albums": [
+          {
+            "title": "Purple Naked Ladies",
+            "release_date": "December 20, 2011",
+            "songs": [
+              {
+                "title": "Violet Nude Women",
+                "duration": "3:52"
+              },
+              {
+                "title": "They Say",
+                "duration": "4:58"
+              },
+              {
+                "title": "She Knows",
+                "duration": "4:30"
+              }
+            ]
+          },
+          {
+            "title": "Ego Death",
+            "release_date": "June 30, 2015",
+            "songs": [
+              {
+                "title": "GIRL",
+                "duration": "4:06"
+              },
+              {
+                "title": "Special Affair",
+                "duration": "4:27"
+              },
+              {
+                "title": "For The World",
+                "duration": "3:23"
+              }
+            ]
+          },
+          {
+            "title": "Hive Mind",
+            "release_date": "July 20, 2018",
+            "songs": [
+              {
+                "title": "Come Over",
+                "duration": "5:22"
+              },
+              {
+                "title": "La Di Da",
+                "duration": "3:27"
+              },
+              {
+                "title": "Wanna Be",
+                "duration": "3:36"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tyler, The Creator",
+        "albums": [
+          {
+            "title": "Goblin",
+            "release_date": "May 10, 2011",
+            "songs": [
+              {
+                "title": "Yonkers",
+                "duration": "4:11"
+              },
+              {
+                "title": "She",
+                "duration": "4:13"
+              },
+              {
+                "title": "Bitch Suck Dick",
+                "duration": "3:36"
+              }
+            ]
+          },
+          {
+            "title": "Wolf",
+            "release_date": "April 2, 2013",
+            "songs": [
+              {
+                "title": "WOLF",
+                "duration": "1:50"
+              },
+              {
+                "title": "Jamba",
+                "duration": "3:32"
+              },
+              {
+                "title": "IFHY",
+                "duration": "5:19"
+              }
+            ]
+          },
+          {
+            "title": "Flower Boy",
+            "release_date": "July 21, 2017",
+            "songs": [
+              {
+                "title": "Foreword",
+                "duration": "3:14"
+              },
+              {
+                "title": "Where This Flower Blooms",
+                "duration": "3:14"
+              },
+              {
+                "title": "911 / Mr. Lonely",
+                "duration": "4:15"
+              }
+            ]
+          },
+          {
+            "title": "IGOR",
+            "release_date": "May 17, 2019",
+            "songs": [
+              {
+                "title": "IGOR'S THEME",
+                "duration": "3:20"
+              },
+              {
+                "title": "EARFQUAKE",
+                "duration": "3:10"
+              },
+              {
+                "title": "I THINK",
+                "duration": "3:32"
+              }
+            ]
+          },
+          {
+            "title": "Call Me If You Get Lost",
+            "release_date": "June 25, 2021",
+            "songs": [
+              {
+                "title": "SIR BAUDELAIRE",
+                "duration": "1:28"
+              },
+              {
+                "title": "CORSO",
+                "duration": "2:26"
+              },
+              {
+                "title": "LEMONHEAD",
+                "duration": "2:06"
+              }
+            ]
+          }
+        ]
+      }
+  ]
+}
+]

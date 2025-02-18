@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "similar": "motifs"
+  },
+  {
+    "id": 2,
+    "similar": "chansons"
+  },
+  {
+    "id": 3,
+    "similar": "rythme"
+  },
+  {
+    "id": 4,
+    "similar": "paroles"
+  },
+  {
+    "id": 5,
+    "similar": "theme"
+  },
+  {
+    "id": 6,
+    "similar": "voix"
+  },
+  {
+    "id": 7,
+    "similar": "sample"
+  }
+]

@@ -1,0 +1,104 @@
+{
+  "genres": [
+    {
+      "name": "Jazz",
+      "short_description": "Musique caractérisée par l'improvisation.",
+      "long_description": "Le jazz est un genre musical né à la fin du XIXe siècle dans les communautés afro-américaines du sud des États-Unis. Il se distingue par son utilisation de l'improvisation, des rythmes complexes, et une large variété d'instruments, notamment la trompette et le saxophone.",
+      "subgenres": [
+        {
+          "name": "Bebop",
+          "short_description": "Rapide et complexe.",
+          "long_description": "Le bebop, ou bop, est un sous-genre du jazz qui a émergé dans les années 1940. Il est connu pour ses tempos rapides, ses mélodies complexes et ses improvisations sophistiquées.",
+          "examples": ["Charlie Parker", "Dizzy Gillespie", "Thelonious Monk"]
+        },
+        {
+          "name": "Cool Jazz",
+          "short_description": "Plus calme et mélodique.",
+          "long_description": "Le cool jazz, développé dans les années 1950, se caractérise par une approche plus douce et mélodique du jazz, contrastant avec l'intensité du bebop. Il met l'accent sur la composition et l'arrangement.",
+          "examples": ["Miles Davis", "Chet Baker", "Gerry Mulligan"]
+        },
+        {
+          "name": "Free Jazz",
+          "short_description": "Liberté totale d'improvisation.",
+          "long_description": "Le free jazz, apparu dans les années 1960, est une forme de jazz où les musiciens s'affranchissent des structures traditionnelles pour explorer des improvisations libres et atonales.",
+          "examples": ["Ornette Coleman", "John Coltrane", "Albert Ayler"]
+        }
+      ]
+    },
+    {
+      "name": "Rap",
+      "short_description": "Basé sur le rythme et la rime.",
+      "long_description": "Le rap est un genre musical qui met en avant la performance vocale sur des rythmes complexes. Il est né dans les communautés afro-américaines et hispaniques des États-Unis dans les années 1970.",
+      "subgenres": [
+        {
+          "name": "Gangsta Rap",
+          "short_description": "Paroles souvent crues.",
+          "long_description": "Le gangsta rap se concentre sur la vie dans les quartiers difficiles, avec des thèmes comme la violence, la drogue, et la vie de gangster. C'est un sous-genre très influent des années 1980 et 1990.",
+          "examples": ["N.W.A.", "Ice Cube", "2Pac"]
+        },
+        {
+          "name": "Conscious Rap",
+          "short_description": "Paroles à message social.",
+          "long_description": "Le conscious rap met l'accent sur des messages de conscience sociale, politique et culturelle. Les artistes cherchent à éduquer et à inspirer leur public avec des thèmes positifs.",
+          "examples": ["Common", "Mos Def", "A Tribe Called Quest"]
+        },
+        {
+          "name": "Trap",
+          "short_description": "Basses lourdes et rythmes accélérés.",
+          "long_description": "Le trap est un sous-genre du rap qui a émergé dans le sud des États-Unis. Il est caractérisé par des rythmes lents, des basses profondes, et souvent l'utilisation de synthétiseurs.",
+          "examples": ["Young Stoner Life, Young Thug & Lil Duke", "Future", "Migos"]
+        }
+      ]
+    },
+    {
+      "name": "R&B",
+      "short_description": "Rythme et Blues modernisé.",
+      "long_description": "Le R&B, ou Rhythm and Blues, est un genre musical qui a évolué à partir du blues et du gospel, avec l'influence du jazz et du hip-hop. Il se caractérise par ses mélodies vocales riches et ses grooves rythmiques.",
+      "subgenres": [
+        {
+          "name": "Contemporary R&B",
+          "short_description": "Fusion de styles modernes.",
+          "long_description": "Le Contemporary R&B est une évolution du R&B traditionnel, intégrant des éléments de hip-hop, soul, pop et même de l'électronique, créant ainsi un son urbain et moderne.",
+          "examples": ["Beyoncé", "Frank Ocean", "SZA"]
+        },
+        {
+          "name": "Neo Soul",
+          "short_description": "Retour aux sources soul.",
+          "long_description": "Le Neo Soul combine des éléments traditionnels de la soul avec des influences modernes, offrant une alternative plus organique et introspective au R&B contemporain.",
+          "examples": ["Erykah Badu", "D'Angelo", "Lauryn Hill"]
+        },
+        {
+          "name": "Quiet Storm",
+          "short_description": "Musique douce et sensuelle.",
+          "long_description": "Le Quiet Storm est un sous-genre du R&B qui met l'accent sur des ballades romantiques, des mélodies douces et un rythme apaisant, souvent joué la nuit à la radio.",
+          "examples": ["Luther Vandross", "Anita Baker", "Sade"]
+        }
+      ]
+    },
+    {
+      "name": "Electro",
+      "short_description": "Musique électronique.",
+      "long_description": "L'Electro est un genre de musique électronique qui utilise des instruments électroniques comme les synthétiseurs, les boîtes à rythmes et les ordinateurs pour créer des sons novateurs.",
+      "subgenres": [
+        {
+          "name": "Electro House",
+          "short_description": "Rythmes rapides et énergiques.",
+          "long_description": "L'Electro House est un fusion de house avec des éléments de electro, caractérisé par des basses lourdes et des rythmes très énergiques.",
+          "examples": ["Deadmau5", "Steve Aoki", "David Guetta"]
+        },
+        {
+          "name": "Dubstep",
+          "short_description": "Basses wobble et drops.",
+          "long_description": "Le Dubstep est connu pour ses basses profondes et distordues, ses rythmes syncopés et ses drops dramatiques. Originaire du Royaume-Uni, il est devenu mondialement populaire.",
+          "examples": ["Skrillex", "Sub Focus", "Zomboy"]
+        },
+        {
+          "name": "Trance",
+          "short_description": "Séquences hypnotiques.",
+          "long_description": "La Trance est caractérisée par des mélodies répétitives et des progressions harmoniques qui visent à induire un état de transe, avec des BPM généralement élevés.",
+          "examples": ["Armin van Buuren", "Tiësto", "Above & Beyond"]
+        }
+      ]
+    }
+  ]
+}
