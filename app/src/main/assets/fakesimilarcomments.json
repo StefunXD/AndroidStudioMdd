@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "text": "d'accord",
+    "date": "2024-03-15T14:32:17",
+    "user_id": 4
+  },
+  {
+    "id": 3,
+    "text": "pas du tout d'accord",
+    "date": "2024-07-22T09:15:43",
+    "user_id": 2
+  },
+  {
+    "id": 5,
+    "text": "probable",
+    "date": "2024-11-30T22:47:09",
+    "user_id": 4
+  },
+  {
+    "id": 7,
+    "text": "je vais écouter ça",
+    "date": "2025-01-10T16:20:55",
+    "user_id": 1
+  },
+  {
+    "id": 12,
+    "text": "merci pour la recommandation",
+    "date": "2024-09-05T11:08:22",
+    "user_id": 2
+  },
+  {
+    "id": 15,
+    "text": "je vais écouter ça",
+    "date": "2025-02-18T13:45:31",
+    "user_id": 2
+  },
+  {
+    "id": 18,
+    "text": "😂",
+    "date": "2024-12-25T19:12:48",
+    "user_id": 1
+  },
+  {
+    "id": 21,
+    "text": "😍😍😍",
+    "date": "2024-06-14T08:59:03",
+    "user_id": 1
+  },
+  {
+    "id": 29,
+    "text": "🔥",
+    "date": "2025-02-03T23:01:27",
+    "user_id": 2
+  }
+]

@@ -10,6 +10,7 @@
     <string name="home_profile">Profile</string>
     <string name="main_page_new">Nouveautés</string>
     <string name="main_page_question">Questions</string>
+    <string name="main_page_similar">Similar</string>
     <string name="main_page_minustes">m</string>
     <string name="main_page_h">h</string>
     <string name="main_page_day">j</string>
@@ -23,6 +24,7 @@
     /* Blind Test*/
     <string name="blind_test_title">Blind Test</string>
     <string name="blind_start">Démarrer</string>
+
     /*Dropdown Blind Test*/
     <string name="dropdown_bt_options">Choississez une option</string>
     <string name="dropdown_bt_many">Combien de questions ?</string>
@@ -39,7 +41,23 @@
     <string name="bt_genre_jazz">Jazz</string>
     <string name="bt_genre_hip_hop">Hip Hop</string>
     <string name="bt_genre_metal">Métal</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
+
+    /* Login */
+    <string name="login_title">Connexion</string>
+    <string name="username_hint">Nom d\'utilisateur</string>
+    <string name="password_hint">Mot de passe</string>
+    <string name="login_button">Se connecter</string>
+    <string name="forgot_password">Mot de passe oublié ?</string>
+    <string name="no_account">Pas encore de compte ?</string>
+    <string name="signup_button">S\'inscrire</string>
+    <string name="error_empty_fields">Veuillez remplir tous les champs</string>
+    <string name="error_invalid_credentials">Identifiants incorrects</string>
+
+    <!-- Strings pour la page de déconnexion -->
+    <string name="logout_title">Déconnexion</string>
+    <string name="logout_confirmation">Êtes-vous sûr de vouloir vous déconnecter ?</string>
+    <string name="logout_button">Se déconnecter</string>
+    <string name="cancel_button">Annuler</string>
+    <string name="logout_success">Vous avez été déconnecté avec succès</string>
 </resources>

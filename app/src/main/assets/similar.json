@@ -1,30 +1,52 @@
 [
   {
     "id": 1,
-    "similar": "motifs"
+    "similar": "motifs",
+    "description": "Comparaison des patterns musicaux récurrents comme les riffs ou les progressions d'accords."
   },
   {
     "id": 2,
-    "similar": "chansons"
+    "similar": "chansons",
+    "description": "Similitude dans la structure ou les versions différentes/reprises des chansons."
   },
   {
     "id": 3,
-    "similar": "rythme"
+    "similar": "rythme",
+    "description": "Comparaison des BPM, patterns de percussion ou grooves."
   },
   {
     "id": 4,
-    "similar": "paroles"
+    "similar": "paroles",
+    "description": "Analyse des thèmes, styles d'écriture ou phrases similaires dans les textes."
   },
   {
     "id": 5,
-    "similar": "theme"
+    "similar": "theme",
+    "description": "Exploration des concepts ou idées centrales partagées par les chansons."
   },
   {
     "id": 6,
-    "similar": "voix"
+    "similar": "voix",
+    "description": "Similitude dans le timbre, la tessiture ou le style de chant des interprètes."
   },
   {
     "id": 7,
-    "similar": "sample"
+    "similar": "sample",
+    "description": "Utilisation d'extraits sonores d'une chanson dans une autre"
+  },
+  {
+    "id": 8,
+    "similar": "instruments",
+    "description": "Utilisation d'instuments ou instrumentales similaires dans la même chanson "
+  },
+  {
+    "id": 9,
+    "similar": "repirse",
+    "description": "Un artiste reprend et s'approprie une chansons déjà existante"
+  },
+  {
+    "id": 10,
+    "similar": "similarité",
+    "description": "Un artiste reprend et s'approprie une chansons déjà existante"
   }
 ]

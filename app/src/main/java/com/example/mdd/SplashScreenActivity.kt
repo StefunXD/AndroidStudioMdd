@@ -56,7 +56,7 @@ class SplashScreenActivity : ComponentActivity() {
             }
         }
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, TestBlindTest::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
         }, 6000)

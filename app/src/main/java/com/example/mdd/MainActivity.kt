@@ -1,39 +1,50 @@
 package com.example.mdd
 
-import android.annotation.SuppressLint
+
 
 import android.media.MediaPlayer
+import android.os.Build
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
+
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 
-import androidx.compose.foundation.layout.padding
+
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.AccountCircle
+
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
-import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.CircularProgressIndicator
+
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.SegmentedButton
-import androidx.compose.material3.SingleChoiceSegmentedButtonRow
+
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableIntStateOf
+
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -42,21 +53,26 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
+
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.rememberNavController
-import com.example.mdd.navigations.Graph
-import com.example.mdd.ui.elements.SliderDiscrete
+
+import com.example.mdd.navigations.Screen
+import com.example.mdd.ui.elements.DisplaySimilarMusicData
+
 import com.example.mdd.ui.management.Blindtestmanagerpage
 import com.example.mdd.ui.theme.MDDTheme
-import com.example.mdd.uimanager.DropDownOptionsBlindTest
+
 import com.example.mdd.viewmodel.BlindTestViewModel
+import com.example.mdd.viewmodel.SimilarMusicViewModel
 import com.example.mdd.viewmodel.SliderViewModel
-import com.example.mdd.viewmodel.ViewModelBlindTestOptionsDropdown
-import androidx.compose.material3.SegmentedButtonDefaults.itemShape as itemShape1
 
 class MainActivity : ComponentActivity() {
+
+    private val similarMusicViewModel: SimilarMusicViewModel by viewModels()
     var mediaPlayer: MediaPlayer? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -87,37 +103,6 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-
-
-@Composable
-fun VersionZeroPageLogo(image_logo: String, quote:String, modifier: Modifier = Modifier) {
-    Card () {
-        Text("Bienvenue sur MDD")
-        Text(image_logo)
-        Text(quote)
-    }
-}
-
-data class QuoteLogoPage(val quote: String,val song: String, val artist: String,
-                         val album: String, val date: String)
-object SampleQuoteLogoPage {
-    val Quotes = listOf(QuoteLogoPage("I found a diamond in the rough","Diamond in da Ruff", "Matt Martians", "The Drum Chord Theory", "2017"),
-        QuoteLogoPage("Groove is in the Heart","Groove is In the Hearts", "Deee-Lite", "The elektra Years", "1990"),
-        QuoteLogoPage("The way you move is mystery", "D.A.N.C.E", "Justice", "Justice","2007"),
-        QuoteLogoPage("Tonight she just yelling, \"Fuck me\", two weeks she'll be yelling fuck me", "CocoaButter Kisses", "Chance the Rapper", "Acid Rap","2013"),
-        QuoteLogoPage("Go! Go! Go! Godzilla", "Godzilla", "Bear McCreary, Serj Takian", "Godzilla King of The Monsters","2013"))
-}
-
-
 data class SimilarMainPage(val user_name:String, val song_name_1 :String,
                            val album_name_1:String, val artist_name_1: String,
                            val song_date_1 : String, val similar:String,
@@ -137,8 +122,17 @@ fun MainPage(smps: List<SimilarMainPage>, modifier: Modifier = Modifier) {
     var isExpanded by remember { mutableStateOf(false) }
     val context = LocalContext.current
     //val genreList = loadGenres(context)
-    Text(text = "Nouveautés")
-    Text(text = "Questions")
+    Row( modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.SpaceEvenly) {
+        Text(text = stringResource(R.string.main_page_new))
+        IconButton(onClick = {
+                navController.navigate(Screen.LoginScreen.route)
+        }) {
+            Icon(imageVector = Icons.Filled.AccountCircle, contentDescription = "Connexion")
+        }
+    }
+
+    Text(text = stringResource(R.string.main_page_question))
     Column {
         LazyColumn {
             items(smps) { smp -> CardSimilarMainPage(smp, modifier) }
@@ -192,6 +186,34 @@ fun CardSimilarMainPage(smp: SimilarMainPage, modifier: Modifier = Modifier) {
     }
 }
 
+
+@RequiresApi(Build.VERSION_CODES.O)
+@Composable
+fun SimilarFullScreen(similarMusicViewModel: SimilarMusicViewModel) {
+    val context = LocalContext.current
+    val similarMusicList by similarMusicViewModel.similarMusicList.collectAsState()
+    val isLoading by similarMusicViewModel.isLoading.collectAsState()
+    val error by similarMusicViewModel.error.collectAsState()
+
+    LaunchedEffect(key1 = true) {
+        similarMusicViewModel.loadSimilarMusicData(context)
+    }
+
+    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+        if (isLoading) {
+            CircularProgressIndicator()
+        } else if (error != null) {
+            Text(text = "Error: $error")
+        } else {
+            if (similarMusicList.isNotEmpty()) {
+                DisplaySimilarMusicData(similarMusicList)
+            } else {
+                Text(text = "No data available")
+            }
+        }
+    }
+}
+
 ///User
 
 
@@ -207,118 +229,7 @@ fun Finale_blind_test_assembler(){
 }
 
 
-//@Composable
-//fun VersionZeroSongtoSongSimilar(song_name_1 :String, album_name_1:String, artist_name_1: String, song_date_1 : String, similar_1:String,
-//                       song_name_2 :String, album_name_2 :String, artist_name_2: String, song_date_2 : String,
-//                       song_name_3 :String, album_name_3:String, artist_name_3: String, song_date_3 : String, similar_2:String,
-//                       song_name_4 :String, album_name_4 :String, artist_name_4: String, song_date_4 : String,
-//                       song_name_5 :String, album_name_5 :String, artist_name_5: String, song_date_5 : String, similar_3:String,
-//                       song_name_6 :String, album_name_6 :String, artist_name_6: String, song_date_6 : String,
-//                       modifier: Modifier = Modifier) {
-//    //apprendre les boucles
-//    Card {
-//        Row() {
-//            Image(
-//                painter = painterResource(id = R.drawable.sharp_android_24),
-//                contentDescription = "Utilisateur",
-//                modifier = Modifier
-//                    .size(30.dp)
-//                    .clip(CircleShape)
-//
-//            )
-//            Spacer(modifier = Modifier.width(8.dp))
-//            Text("Name user 01343EEZA341Z")
-//        }
-//        Column {
-//            Text(
-//                //si groupe ok on change la phrase, il faut des données de défaults, changer la phrase des similaire par rapport à l'attribut
-//                text = "La chanson \"$song_name_1\" de l'album $album_name_1 de l'artiste $artist_name_1 qui dure $song_date_1 est similaire à \"$song_name_2\", de l'album $album_name_2 de l'artiste $artist_name_2 qui dure $song_date_2",
-//                modifier = modifier
-//            )
-//            Text(similar_1)
-//            Row(){
-//            Image(
-//                painter = painterResource(id = R.drawable.baseline_thumb_up_alt_24),
-//                contentDescription = "Like button"
-//            )
-//                Spacer(modifier = Modifier.width(20.dp))
-//            Image(
-//                painter = painterResource(id = R.drawable.baseline_comment_24),
-//                contentDescription = "Like button"
-//                )
-//            }
-//        }
-//    }
-//    Card {
-//        Text(
-//            //si groupe ok on change la phrase, il faut des données de défaults, changer la phrase des similaire par rapport à l'attribut
-//            text = "La chanson \"$song_name_3\" de l'album $album_name_3 de l'artiste $artist_name_3 sortie en $song_date_3 est similaire à \"$song_name_4\", de l'album $album_name_4 de l'artiste $artist_name_4 qui dure $song_date_4",
-//            modifier = modifier
-//        )
-//        Text(similar_2)
-//    }
-//    Card {
-//        Text(
-//            //si groupe ok on change la phrase, il faut des données de défaults, changer la phrase des similaire par rapport à l'attribut
-//            text = "La chanson \"$song_name_3\" de l'album $album_name_3 de l'artiste $artist_name_3 sortie en $song_date_3 est similaire à \"$song_name_4\", de l'album $album_name_4 de l'artiste $artist_name_4 qui dure $song_date_4",
-//            modifier = modifier
-//        )
-//        Text(similar_2)
-//    }
-//    Card {
-//        Text(
-//            //si groupe ok on change la phrase, il faut des données de défaults, changer la phrase des similaire par rapport à l'attribut
-//            text = "La chanson \"$song_name_5\" de l'album $album_name_5 de l'artiste $artist_name_5 sortie en $song_date_5 est similaire à \"$song_name_6\", de l'album $album_name_6 de l'artiste $artist_name_6 qui dure $song_date_6",
-//            modifier = modifier
-//        )
-//        Text(similar_3)
-//        Button(onClick = { /*TODO*/ }) {
-//            Text(text = "Affichez plus")
-//        }
-//    }
-//}
-
-
-
-//loadQuestionsFromAssets(context: Context, fileName: String): This function takes the Context and the JSON file name as parameters.
-//context.assets.open(fileName): Opens the JSON file from the assets folder.
-//bufferedReader().use { it.readText() }: Reads the entire file content into a string.
-//Gson(): Creates a Gson instance for parsing.
-//TypeToken<List<Question>>() {}.type: Creates a TypeToken to tell Gson that you're parsing a list of Question objects.
-//gson.fromJson(jsonString, listQuestionType): Parses the JSON string into a List<Question>.
-//fileName: This parameter is used to specify the name of the file.
-//object com.example.mdd.JsonUtils: This is used to create a singleton.
-
-
-
-//@Preview(showBackground = true)
-//@Composable
-//fun GreetingPreview() {
-//    MDDTheme {
-//        Column {
-//            VersionZeroSongtoSongSimilar(
-//                "Outta my head",
-//                "Pacific Time 2",
-//                "Phonte et Carmen Rodgers", "2025",
-//                "Motif musical", "Crust",
-//                "Yasuke", "Flying Lotus",
-//                "2021", "Nakie Nakie",
-//                "NEXT", "Electro Deluxe",
-//                "2024", "Sonorité, rythme",
-//                "Wort it to the top",
-//                "Tales From The Land Of Milk And Honey",
-//                "The Foreign Exchange","2015",
-//                "Hardrock","Sound System",
-//                "Herbie Hancock","2024",
-//                "Sonorité",
-//                "Rockit","Futur Shock",
-//                "Herbie Hancock","1983"
-//            )
-//
-//        }
-//
-//    }
-//}
+@RequiresApi(Build.VERSION_CODES.O)
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreviewGreetings() {
@@ -326,7 +237,9 @@ fun GreetingPreviewGreetings() {
         Column {
           MainPage(SampleSimilarMainPage.SimilarMainPageSample)
             //GenreListScreen()
+            //SimilarFullScreen(similarMusicViewModel = viewModel())
         }
+
     }
 }
 

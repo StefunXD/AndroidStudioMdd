@@ -1,0 +1,65 @@
+[
+  {
+    "id_similar": 1,
+    "song_1": "EARFQUAKE",
+    "album_1": "IGOR",
+    "date_1": "2019-05-17",
+    "artiste_1": "Tyler, The Creator",
+    "song_2": "GIRL",
+    "album_2": "Ego Death",
+    "artiste_2": "The Internet",
+    "date_2": "2015-06-30",
+    "date_creation": "2024-06-12T10:15:23",
+    "id_user": [
+      {
+        "id": 3,
+        "name": "User 3"
+      }
+    ],
+    "nb_likes": 42,
+    "id_comments": [7, 18],
+    "date": "2024-06-12"
+  },
+  {
+    "id_similar": 2,
+    "song_1": "What’s the Use?",
+    "album_1": "Swimming",
+    "date_1": "2018-08-03",
+    "artiste_1": "Mac Miller",
+    "song_2": "Got It Good",
+    "album_2": "99.9%",
+    "artiste_2": "Kaytranada",
+    "date_2": "2016-05-06",
+    "date_creation": "2024-09-25T14:30:45",
+    "id_user": [
+      {
+        "id": 1,
+        "name": "User 1"
+      }
+    ],
+    "nb_likes": 15,
+    "id_comments": [12, 29],
+    "date": "2024-09-25"
+  },
+  {
+    "id_similar": 3,
+    "song_1": "The Last Party",
+    "album_1": "The Last Party",
+    "date_1": "2021-04-08",
+    "artiste_1": "Matt Martians",
+    "song_2": "Come Over",
+    "album_2": "Hive Mind",
+    "artiste_2": "The Internet",
+    "date_2": "2018-07-20",
+    "date_creation": "2024-11-03T09:05:12",
+    "id_user": [
+      {
+        "id": 4,
+        "name": "User 4"
+      }
+    ],
+    "nb_likes": 27,
+    "id_comments": [1, 5],
+    "date": "2024-11-03"
+  }
+]

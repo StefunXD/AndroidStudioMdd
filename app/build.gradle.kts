@@ -57,6 +57,7 @@ dependencies {
     implementation(libs.androidx.runner)
     implementation(libs.androidx.espresso.core)
     implementation(libs.androidx.core.splashscreen)
+    implementation(libs.androidx.core.i18n)
     testImplementation(libs.junit)
     implementation(libs.gson)
     testImplementation(libs.junit.jupiter)
