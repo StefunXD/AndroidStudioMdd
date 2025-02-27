@@ -3,6 +3,7 @@ package com.example.mdd
 
 
 import android.annotation.SuppressLint
+import android.app.Application
 import android.media.MediaPlayer
 import android.os.Build
 import android.os.Bundle
@@ -45,6 +46,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.livedata.observeAsState
 
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -58,18 +60,24 @@ import androidx.compose.ui.res.stringResource
 
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+
+
 import androidx.navigation.compose.rememberNavController
+import com.example.mdd.model.DataFakeSimilar
 
 
 import com.example.mdd.navigations.Screen
 import com.example.mdd.ui.elements.DisplaySimilarMusicData
 
 import com.example.mdd.ui.management.Blindtestmanagerpage
+import com.example.mdd.ui.management.SimilarMusicScreenPreview
 import com.example.mdd.ui.theme.MDDTheme
+
 
 
 import com.example.mdd.viewmodel.SimilarMusicViewModel
 import com.example.mdd.viewmodel.SliderViewModel
+
 
 class MainActivity : ComponentActivity() {
 
@@ -145,8 +153,8 @@ fun MainPage(smps: List<SimilarMainPage>, modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun CardSimilarMainPage(smp: SimilarMainPage, modifier: Modifier = Modifier) {
-   Card {
+fun CardSimilarMainPage(smp: SimilarMainPage, modifier: Modifier) {
+    Card {
         Row() {
             Image(
                 painter = painterResource(id = R.drawable.sharp_android_24),
@@ -186,6 +194,49 @@ fun CardSimilarMainPage(smp: SimilarMainPage, modifier: Modifier = Modifier) {
 }
 
 
+
+
+
+       /* Row() {
+            Image(
+                painter = painterResource(id = R.drawable.sharp_android_24),
+                contentDescription = "Utilisateur",
+                modifier = Modifier
+                    .size(30.dp)
+                    .clip(CircleShape)
+
+            )
+            Spacer(modifier = Modifier.width(8.dp))
+            Text("User : \"${smp.user_name}\"       20 m")
+        }
+        Column {
+            Text(
+                //si groupe ok on change la phrase, il faut des données de défaults, changer la phrase des similaire par rapport à l'attribut
+                text = "La chanson \"${smp.song_name_1}\" de l'album ${smp.album_name_1} de l'artiste ${smp.album_name_1} sortie en ${smp.song_date_1} " +
+                        "est similaire à \"${smp.song_name_2}\", de l'album " +
+                        "${smp.album_name_2} de l'artiste ${smp.artist_name_2} sortie en" +
+                        " ${smp.song_date_2}",
+                modifier = modifier
+            )
+            Text(smp.similar, modifier = Modifier.align(Alignment.CenterHorizontally))
+            Row() {
+                Image(
+                    painter = painterResource(id = R.drawable.baseline_thumb_up_alt_24),
+                    contentDescription = "Like button"
+                )
+                Spacer(modifier = Modifier.width(20.dp))
+                Image(
+                    painter = painterResource(id = R.drawable.baseline_comment_24),
+                    contentDescription = "Like button"
+                )
+
+            }
+        }
+    }*/
+
+
+
+
 @RequiresApi(Build.VERSION_CODES.O)
 @Composable
 fun SimilarFullScreen(similarMusicViewModel: SimilarMusicViewModel) {
@@ -218,25 +269,81 @@ fun SimilarFullScreen(similarMusicViewModel: SimilarMusicViewModel) {
 
 ///BlindTests
 
+/*@Composable
+fun SimilarMusicPreview() {
+    val viewModel: FakeSimilarViewModel = viewModel(factory = FakeSimilarViewModelFactory(LocalContext.current.applicationContext as Application))
+    val similarMusicList by viewModel.similarMusicList.observeAsState(initial = emptyList())
+
+    LazyColumn {
+        items(similarMusicList) { music ->
+            CardSimilarMainPage(music = music)
+        }
+    }
+}*/
+@SuppressLint("ViewModelConstructorInComposable")
+@Composable
+fun Finale_blind_test_assembler() {
+    Blindtestmanagerpage(viewModelslider = SliderViewModel())
+    val viewModelslider = SliderViewModel()
+    Text(text = "Il y'a auras" + viewModelslider.sliderValue.toString() + " questions")
+}
+
+@Composable
+fun CardSimilarMainPage(music: DataFakeSimilar, modifier: Modifier = Modifier) {
+    Card {
+        Column {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Image(
+                    painter = painterResource(id = R.drawable.sharp_android_24),
+                    contentDescription = "Utilisateur",
+                    modifier = Modifier
+                        .size(30.dp)
+                )
+                Spacer(modifier = Modifier.width(8.dp))
+                Text("User : \"${music.username}\"")
+            }
+            Text(
+                text = "La chanson \"${music.song1}\" de l'album ${music.album1} de l'artiste ${music.artist1} est similaire à \"${music.song2}\", de l'album ${music.album2} de l'artiste ${music.artist2}",
+                modifier = modifier
+            )
+            Text(music.similar, modifier = Modifier.align(Alignment.CenterHorizontally))
+            Row() {
+                Image(
+                    painter = painterResource(id = R.drawable.baseline_thumb_up_alt_24),
+                    contentDescription = "Like button"
+                )
+                Spacer(modifier = Modifier.width(20.dp))
+                Image(
+                    painter = painterResource(id = R.drawable.baseline_comment_24),
+                    contentDescription = "Like button"
+                )
+            }
+        }
+    }
+}
+
 
 
 
 @SuppressLint("ViewModelConstructorInComposable")
 @Composable
-fun Finale_blind_test_assembler(){
+fun Finale_Similar_assembler(){
      Blindtestmanagerpage(viewModelslider = SliderViewModel())
     val viewModelslider = SliderViewModel()
     Text(text = "Il y'a auras" + viewModelslider.sliderValue.toString() +" questions")
 }
 
 
+@SuppressLint("ViewModelConstructorInComposable")
 @RequiresApi(Build.VERSION_CODES.O)
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreviewGreetings() {
     MDDTheme {
         Column {
-          MainPage(SampleSimilarMainPage.SimilarMainPageSample)
+            SimilarMusicScreenPreview()
+          //MainPage(SampleSimilarMainPage.SimilarMainPageSample)
+
             //GenreListScreen()
             //SimilarFullScreen(similarMusicViewModel = viewModel())
         }
