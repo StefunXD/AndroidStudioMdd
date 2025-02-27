@@ -2,6 +2,7 @@ package com.example.mdd
 
 
 
+import android.annotation.SuppressLint
 import android.media.MediaPlayer
 import android.os.Build
 import android.os.Bundle
@@ -57,8 +58,8 @@ import androidx.compose.ui.res.stringResource
 
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.rememberNavController
+
 
 import com.example.mdd.navigations.Screen
 import com.example.mdd.ui.elements.DisplaySimilarMusicData
@@ -66,7 +67,7 @@ import com.example.mdd.ui.elements.DisplaySimilarMusicData
 import com.example.mdd.ui.management.Blindtestmanagerpage
 import com.example.mdd.ui.theme.MDDTheme
 
-import com.example.mdd.viewmodel.BlindTestViewModel
+
 import com.example.mdd.viewmodel.SimilarMusicViewModel
 import com.example.mdd.viewmodel.SliderViewModel
 
@@ -88,9 +89,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    val navController = rememberNavController()
-                    val viewModel: BlindTestViewModel = viewModel()
-                    MainPage(SampleSimilarMainPage.SimilarMainPageSample)
+                  MainPage(SampleSimilarMainPage.SimilarMainPageSample)
                     //Graph(navController = navController, viewModel = viewModel)
                 }
             }
@@ -221,6 +220,8 @@ fun SimilarFullScreen(similarMusicViewModel: SimilarMusicViewModel) {
 
 
 
+
+@SuppressLint("ViewModelConstructorInComposable")
 @Composable
 fun Finale_blind_test_assembler(){
      Blindtestmanagerpage(viewModelslider = SliderViewModel())
